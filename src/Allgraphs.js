@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
-import One from './images/1.png';
 import './App.css';
 import { LineChart, Line, XAxis, YAxis, Area, CartesianGrid, Tooltip, Legend, BarChart, Bar, ComposedChart, ResponsiveContainer } from 'recharts';
 
