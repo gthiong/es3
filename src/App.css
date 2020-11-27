@@ -44,8 +44,17 @@
   flex-direction: column;
 }
 
-.col2 {
-  border: darkkhaki;
+.wrapper {
+  box-shadow: 20px 8px 20px whitesmoke;
+  border: 2px #5b6770;
+  -webkit-transition: box-shadow .2s ease-in;
+  display: block;
+  margin: 30px auto;
+}
+
+.wrapper:hover {
+  box-shadow: 30px 30px 30px 30px #D6D6D2;
+  -webkit-transition: box-shadow .2s ease-in;
 }
 
 @keyframes App-logo-spin {
