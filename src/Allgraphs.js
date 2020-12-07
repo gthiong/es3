@@ -3,6 +3,8 @@ import { Grid, Image, Dropdown, Button } from 'semantic-ui-react';
 import './App.css';
 import { Bar, ResponsiveBar } from '@nivo/bar';
 import { ResponsiveLine } from '@nivo/line';
+import { Link } from 'react-router-dom';
+import dashboard from './dashboard';
 
 const mydata = [{ country: "AD", "hot dogs": 13 }, { country: "AE", "hot dogs": 17 }, { country: "AF", "hot dogs": 9 }];
 const mydata2 = [{ "country": "AD", "hot dog": 154, "hot dogColor": "hsl(12, 70%, 50%)", "burger": 150, "burgerColor": "hsl(35, 70%, 50%)", "sandwich": 14, "sandwichColor": "hsl(213, 70%, 50%)", "kebab": 62, "kebabColor": "hsl(10, 70%, 50%)", "fries": 107, "friesColor": "hsl(78, 70%, 50%)", "donut": 174, "donutColor": "hsl(172, 70%, 50%)"},
@@ -425,7 +427,7 @@ const Appgraph = () => (
           }
         }}
       />
-      <Button>Move to Dashboard</Button>
+      <Mover />
     </div>
   );
 
@@ -543,5 +545,15 @@ const Allgraphs = (props) =>{
         </Grid>
     )
 }
+
+class Mover extends React.Component {
+  render() {
+    return (
+      <Button>
+        <Link to={{pathname: "/dashboard", data: Appgraph}}><h2>Move to Dashboard</h2></Link>
+      </Button>
+    )
+  }
+};
 
 export default Allgraphs;

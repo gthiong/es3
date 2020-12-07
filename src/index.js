@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Dashboard from './dashboard';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route path="/App" component={ App } />
+    <Route path="/dashboard" component={ Dashboard } />
+  </Router>,
   document.getElementById('root')
 );
 
