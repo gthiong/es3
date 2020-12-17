@@ -1,0 +1,7 @@
+.graph-container {
+    transition: box-shadow .3s;
+}
+
+.graph-container:hover {
+    box-shadow: 0 0 11px #f0f0f0;
+}
